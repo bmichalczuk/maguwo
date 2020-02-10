@@ -1,0 +1,63 @@
+.pricing {
+    background-color: $darkBlue;
+    font-family: Raleway, Arial, sans-serif;
+    padding: 1.5em;
+    text-align: center;
+    @media ($big) {
+        padding: 3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    &__header {
+        margin: 2em auto;
+        @media ($big) {
+            text-align: left;
+        }
+    }
+    &__header,
+    &__btn {
+        @media ($big) {
+            margin: 2em 3em;
+        }
+    }
+    &__heading,
+    &__subheading {
+        margin: 0;
+    }
+    &__heading {
+        color: $white;
+        font-size: 1.5em;
+        font-weight: 700;
+        
+        @media ($medium) {
+            font-size: 2em;
+        }
+    }
+    &__subheading {
+        color: #67687b;
+        font-size: .8em;
+        @media ($medium) {
+           font-size: 1em;
+        }
+        
+    }
+    
+    &__btn {
+        border: 5px solid $white;
+        background-color: $yellow;
+        color: $darkBlue;
+        font-size: 1.125em;
+        font-weight: 700;
+        padding: 1.5em 3em;
+        transition: .3s;
+        
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.features {
+    background-color: #fbf8f1;
+    padding: 2em;
+    @media ($medium) {
+        background-image: url(../img/featuresbg.png);
+        background-repeat: no-repeat;
+        background-position: center 5em;
+        background-size: contain;
+        background-position: center 5em;
+    }
+    &__header {
+        color: $darkBlue;
+        font-family: Raleway;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 1em auto 0;
+    }
+    &__heading {
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0;
+
+    }
+    &__subheading {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: .5rem;
+    }
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 2em auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.feature {
+    flex: 1;
+    margin: 1em;
+    padding: 1em;
+    &__image {
+        max-width: 80%;
+    }
+    &__heading {
+        font-family: Rockwell, Kameron, serif;
+        font-weight: 700;
+        font-size: 1.875em;
+        color: $yellow;
+
+            &:before {
+                content: "";
+                border-top: 2px solid $darkBlue;
+                display: block;
+                width: 2em;
+                margin: .5em auto;
+        }
+    }
+    &__desrciption {
+        color: $darkBlue;
+        font-family: Raleway, sans-serif;
+        font-size: .875em;
+        font-weight: normal;
+    }
+}

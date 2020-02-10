@@ -1,0 +1,137 @@
+.help {
+	font-weight: 600;
+	text-align: center;
+	display: flex;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1em;
+	@media ($medium) {
+		left: auto;
+		right: 0;
+	}
+	@media ($big) {
+		font-size: 1em;
+		flex: 1 0 auto;;
+		position: relative;
+		border-left: solid 1px #ebebeb;
+	}
+	&__toggle {
+		position: absolute;
+		left: 0;
+		width: 2.5em;
+		height: 2.5em;
+		border-radius: 50%;
+		border: none;
+		background: transparent;
+		margin-bottom: 15px;
+		img {
+			max-width: 100%;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		@media($medium) {
+			left: auto; 
+			right: 0;
+			top: 0;
+		}
+		@media($big) {
+			display: none;
+		}
+	}
+	&__info {
+		display: none;
+		@media ($big) {
+			display: block;
+			text-align: center;
+		}
+	}
+	&__heading {
+		font-size: .75em;
+	}
+	&__chat,
+	&__phone {
+		@media ($big) {
+			display: inline-block;
+			margin: 1em;
+			padding: 0 1em;
+		}
+	}
+	&__chat {
+		font-size: .875em;
+		text-transform: capitalize;
+		font-weight: inherit;
+		padding: .5em 1em;
+		background-color: $white;
+		border: 2px solid $yellow;
+		&:hover,
+		&:focus {
+			background-color: $yellow;
+			border-color:	$white;
+			cursor: pointer;
+			@media ($big) {
+				border-color: $yellow;
+				background-color: $white;
+			}
+		}
+		@media ($big) {
+			margin: 0 2em 0 0;
+			background-color: $yellow;
+			color: $darkBlue;
+			padding: 1em 1.5em;
+		}
+	}
+	&__phone {
+		color: inherit;
+		text-decoration: none;
+		font-size: 1em;
+		font-family: Lato, sans-serif;
+		font-weight: 700;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+		@media($big) {
+			font-size: 1.4em;
+			margin: 0 0 0 .5em;
+			border-left: 1px solid #babbc4;
+		}
+	}
+}
+@media (max-width: 62.5em) {
+	.help--opened .help__info {
+	display: flex;
+	padding: .5em 1em;
+	flex-direction: column;
+	position: absolute;
+	top: 6em;
+	left: 0;
+	background: $yellow;
+	z-index: 2;
+	@media($medium) {
+		right: 0; 
+		left: auto;
+		top: 4em;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 30px solid $yellow;
+		position: absolute;
+		top: -1.8em;
+		@media($medium) {
+			right: 2px;
+		}
+
+	}
+}
+}

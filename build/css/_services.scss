@@ -1,0 +1,77 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    @media ($big){
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+.service {
+    flex: 1;
+    text-align: center;
+    padding: 3em 2em;
+    color: $white;
+    font-family: Raleway;
+    &--webhost {
+        background-color: $darkBlue;
+    }
+    &--domain {
+        background-color: $yellow;
+    }
+    &__logo {
+        display: block;
+        font-size: 5em;
+        @media($medium) {
+            font-size: 8.36em;
+        }
+        &--webhost {
+            max-width: 5em;
+            margin: 3rem auto;
+        }
+        &--domain {
+            padding: 0;
+            margin: 1rem auto;
+            @media ($big) {
+                margin: 2rem auto; 
+            }
+            font-weight: bold;
+            color: $darkBlue;
+        }
+    }
+    &__header {
+        font-size: 2.25em;
+        font-weight: bold;
+        margin: 0 auto;
+    }
+    &__description {
+        max-width: 30em;
+        margin: 1em auto;
+    }
+    &__btn {
+        padding: .75em 2.5em;
+        color: $white;
+        border: solid 2px;
+        background: transparent;
+        transition: .3s;
+        font-size: 1.125em;
+        font-weight: bold;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            
+        }
+        &--webhost {
+            &:hover,
+            &:focus {
+                color: $yellow;
+            }
+        }
+         &--domain {
+            &:hover,
+            &:focus {
+                color: $darkBlue;
+            }
+        }
+    }
+    
+}

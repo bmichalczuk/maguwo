@@ -1,0 +1,31 @@
+@import "colors";
+@import "fonts";
+@import "media";
+@import "siteHeader";
+@import "domain";
+@import "services";
+@import "features";
+@import "clients";
+@import "pricing";
+@import "footer.scss";
+html {
+	box-sizing: border-box;
+}
+body {
+	font-size: 100%;
+	min-height: 100vh;
+	line-height: 1.5;
+	background: blue;
+}
+.wraper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.visualy-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px ;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}

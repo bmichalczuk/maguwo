@@ -1,0 +1,96 @@
+.testimonials {
+    background-color: $white;
+    padding: 2em;
+    
+}
+.clients {
+    margin: 1em auto;
+    width: 90%;
+    @media ($big) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 2em;
+        
+    }
+    &__header {
+        text-align: center;
+        padding: .5em;
+        font-family: Raleway, Arial, sans-serif;
+        max-width: 23.125em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        @media ($medium) {
+            text-align: left;
+           
+        }
+    }
+    &__heading {
+        font-weight: 700;
+        font-size: 2.25em;
+        margin: 0;
+    }
+    &__description {
+        font-size: 1em;
+    }
+    &__list {
+        text-align: center;
+        padding: 0;
+        list-style-type: none;
+    }
+}
+.client {
+     max-width: 15em;
+     height: auto;
+     margin: 5px;
+     @media ($medium) {
+       max-width: 20%;
+       height: 115px;
+     }
+     @media ($big) {
+      max-width: 10.75em;
+       
+     }
+     display: inline-block;
+    &__logo {
+        display: block;
+        max-width: 100%;
+    }
+}
+.opinions {
+    text-align: center;
+}
+.opinion {
+    max-width: 13.437em;
+    background-color: #faf9f9;
+    text-align: left;
+    position: relative;
+    padding: 1em;
+    display: inline-block;
+    &__text,
+    &__author {
+        display: block;
+    }
+    &__text {
+        font-family: Rockwell, Kameron, serif;
+        font-style: italic;
+        font-size: 0.875em;
+        color: #a4a4a4;
+    }
+    &__author {
+        font-family: Raleway, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1em;
+        color: #696969;
+        font-style: normal;
+        margin-top: 1em;
+    }
+    &__photo {
+        position: absolute;
+        right: 1em;
+        bottom: -2.2em;
+        max-width: 5.5em;
+    }
+}

@@ -1,0 +1,40 @@
+.site-header {
+	background: $white;
+	padding: 0;
+	color: $darkBlue;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	position: relative;
+	align-items: center;
+	justify-content: space-around;
+	font-family: Raleway;
+	@media ($big) {
+		color: $darkBlue;
+		flex-direction: row;
+		height: 9.375em;
+		padding: 0 1em;
+		justify-content: space-around;
+		//padding-left: 7.5em;
+		//padding-right: 7.5em;
+	}
+	@media (min-width: 70em) {
+		padding: 0 4em;
+	}
+	&__heading {
+		display: flex;
+		max-width: 70%;
+		align-items: center;
+		font-size: 1.875em;
+		font-family: Kameron;
+		font-weight: 400;
+		&--bolder {
+			font-weight: 700;
+		}
+	}
+	&__icon {
+		margin-right: .25em;
+	}
+}
+@import "nav";
+@import "help";

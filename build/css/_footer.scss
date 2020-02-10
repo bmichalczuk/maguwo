@@ -1,0 +1,187 @@
+.footer {
+    background-color: #363855;
+    color: $white;
+    padding: 2em 1em;
+    font-size: .9em;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    @media($medium) {
+        font-size: 1em;
+    }
+    @media($big) {
+        padding: 5em;
+    }
+    &__map {
+        position: relative;
+        @media($medium) {
+            min-height: 20em;
+            width: 100%;
+            background-image: url(../img/map.png);
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        @media($big) {
+            max-width: 75%;
+            float: left;
+        }
+    }
+    &__side-content {
+        margin: 0;
+        
+        font-family: Raleway, Helvetica, sans-serif;
+        @media($big) {
+            margin: 3em;
+        }
+    }
+    &__copyright {
+        clear: both;
+        text-align: center;
+        img {
+            display: none;
+            @media($medium) {
+                display: inline;
+            }
+        }
+        @media($big) {
+            padding-top: 2em;
+        }
+        
+    }
+    &__return-link {
+        display: none;
+        color: $white;
+        text-decoration: none;
+        font-size: 0.75em;
+        @media($big) {
+            display: block;
+           float: right;
+        }
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+.location {
+    text-align: center;
+    display: flex;
+    font-size: .8em;
+    
+    @media($medium) {
+        position: absolute;
+        right: 25%;
+        bottom: 32%;
+    }
+    @media ($big) {
+        right: 10%;
+        
+    }
+    @media($big) {
+        font-size: 1.125em;
+        font-weight: bold;
+    }
+    &__adress {
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__marker {
+        display: none;
+        order: 2;
+        transform: scale(.7);
+        margin-left: .5em;
+        @media($medium) {
+            display: block;
+        }
+        @media($big) {
+            order: 0;
+            transform: scale(.8);
+        }
+        
+        
+    }
+}
+.socials {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    @media($big) {
+      text-align: right;
+      margin-top: 2.5em;
+      margin-bottom: 3em;
+    }
+    li {
+        display: inline-block;
+    }
+}
+.social {
+    margin: .5em;
+    @media($big) {
+        margin: 0 0 0 .7em;
+    }
+    &__icon {
+        width: 1.5em;
+        height: 1.5em; 
+        fill: $yellow;
+        @media($big) {
+            width: 1.2em;
+            height: 1.2em;
+        }
+    }
+}
+.secondary-nav {
+    display: none;
+    @media($medium) {
+        display: block;
+        text-align: center;
+    }
+    @media($big) {
+        text-align: right;
+
+    }
+    &__heading {
+        display: none;
+        @media ($big) {
+            display: block;
+            font-weight: bold;
+            font-size: 1.125em;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            position: relative;
+            @media($big) {
+                display: block;
+                padding: .3em 0;
+             
+            }
+        }
+        @media($big) {
+            li:not(:last-of-type) {
+                &:before {
+                    content: "";
+                    border-top: 1px solid #565870;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 5em;
+                }
+            }
+        }
+
+
+    }
+    &__list-item {
+        color: $white;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    
+}

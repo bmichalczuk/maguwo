@@ -1,0 +1,114 @@
+.domain {
+	background-image: url(../img/baloon-small.jpg);
+	@media ($medium) {
+		background-image: url(../img/baloon-medium.jpg);
+	}
+	@media($big) {
+		background-image: url(../img/baloon.jpg);
+	}
+	background-position: center center;
+	background-size: cover;
+	padding: 7em .2em;
+	text-align: center;
+	position: relative;
+	color: $white;
+	&__background-layer {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,.2);
+		z-index: 0;
+	}
+	&__heading,
+	&__subheading,
+	&__image,
+	&__form,
+	&__form {
+		position: relative;
+		z-index: 1;
+	}
+	&__heading {
+		font-family: Rockwell, Kameron, serif;
+		font-size: 2em;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+	&__subheading {
+		font-size: 1.5em;
+	}
+	&__image {
+		max-width: 5em;
+		margin: 2em 0;
+	}
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	max-width: 20em;
+	margin: 0 auto;
+	justify-content: center;
+	@media ($medium) {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		max-width: 500px;
+		border: 1em solid rgba(255,255,255, .7);
+	}
+	&__domain-container {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		margin-bottom: 1px;
+		width: 100%;
+		justify-content: center;
+		@media ($medium) {
+			margin-bottom: 0;
+			
+		}
+	}
+	&__input,
+	&__select {
+		position: relative;
+		z-index: 1;
+		padding: .5em;
+		border: none;
+		@media ($medium) {
+			padding: 1em;
+		}
+	}
+
+	&__input--text {
+		flex: 1;
+	}
+	&__select {
+		background-color: $yellow;
+		font-weight: 700;
+		color: $darkBlue;
+		-webkit-appearance: none;
+		background-image: url(../img/arrow-bottom.png);
+		background-position-x: 85%;
+		background-position-y: center;
+		background-repeat: no-repeat;
+		min-width: 5em;
+		@media($medium) {
+			min-width: 6em;
+		}
+	}
+	&__input--action {
+		background: $yellow;
+		color: $white;
+		text-transform: capitalize;
+		transition: .3s;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			color: $darkBlue;
+		}
+		@media ($medium) {
+			border-left: 1px solid $white;
+		}
+
+	}
+}
